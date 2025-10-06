@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Geometry Shorthand Translator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web-based tool to translate geometry shorthand notation into plain English. Perfect for students, teachers, and anyone working with geometric constructions and proofs.
 
-## Available Scripts
+## 🌐 Live Demo
 
-In the project directory, you can run:
+**[Try it here!](https://politikl.github.io/geometry-shorthand-translator)**
 
-### `npm start`
+## 📝 What is Geometry Shorthand?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Geometry shorthand is a concise notation system for describing geometric constructions, problems, and proofs. Instead of writing lengthy descriptions, you can use compact symbols and operators.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Example
 
-### `npm test`
+**Shorthand:**
+```
+\\P:A/P:B/S:AB/R:3;AB=ABC/[ABC]?\\
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Translation:**
+1. Construct point A.
+2. Construct point B.
+3. Connect segment AB.
+4. Construct equilateral triangle ABC with side AB.
+5. What is the area of ABC?
 
-### `npm run build`
+## ✨ Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Line-by-line translation** - Each shorthand statement is translated separately
+- **Support for all major constructions** - Points, segments, lines, circles, polygons
+- **Handles complex notation** - Areas, perimeals, angles, intersections, conditions
+- **Theorem citations** - Recognizes common geometric theorems
+- **Copy functionality** - Easily copy all translations at once
+- **Quick reference guide** - Built-in reminder of common symbols
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Enter your geometry shorthand in the input box
+2. Use `/` to separate individual statements
+3. Wrap your input in `\\` markers (optional)
+4. Click "Translate"
+5. View line-by-line translations
 
-### `npm run eject`
+### Supported Notation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Constructions
+- `P:A` - Construct point A
+- `S:AB` - Connect segment AB
+- `L:AB` - Connect line AB
+- `C:A;5` - Circle with center A and radius 5
+- `R:3;AB=ABC` - Equilateral triangle ABC with side AB
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Measurements
+- `[ABC]=20` - Area of ABC is 20
+- `(ABC)=x` - Perimeter of ABC is x
+- `<ABC=90` - Angle ABC is 90 degrees
+- `AB=5` - Length of AB is 5
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Special Operators
+- `.` - On (e.g., `P:C.AB` = point C on AB)
+- `x` - Intersection (e.g., `P:E=ABxCD`)
+- `|` - Such that / conditions
+- `?` - Question
+- `*` - Properties (e.g., `ABC*IS?` = Is ABC isosceles?)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Proofs
+- `\\p{...}` - We will prove
+- `\\q` - QED (what was to be shown)
+- `\\bc` - Because
+- `\\th` - Therefore
 
-## Learn More
+## 🛠️ Built With
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React** - Frontend framework
+- **Tailwind CSS** - Styling
+- **Lucide React** - Icons
+- **GitHub Pages** - Hosting
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 💻 Run Locally
 
-### Code Splitting
+```bash
+# Clone the repository
+git clone https://github.com/politikl/geometry-shorthand-translator.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Navigate to the project
+cd geometry-shorthand-translator
 
-### Analyzing the Bundle Size
+# Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Start the development server
+npm start
+```
 
-### Making a Progressive Web App
+The app will open at `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📦 Deploy
 
-### Advanced Configuration
+```bash
+# Build and deploy to GitHub Pages
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made with ❤️ for the geometry community
